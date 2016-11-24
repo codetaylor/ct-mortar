@@ -11,7 +11,7 @@ import net.minecraft.item.Item;
 import javax.annotation.Nonnull;
 
 /**
- * Created by sk3lls on 11/22/2016.
+ * Created by codetaylor on 11/22/2016.
  */
 @KorGenerateLangEntries(entries = {
     @KorLangEntry(key = "itemGroup." + KorMortar.MOD_ID + "_tab", value = "CTKor Mortar")

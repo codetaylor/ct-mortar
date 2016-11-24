@@ -7,13 +7,16 @@ import com.sudoplay.mc.kor.spi.event.internal.OnRegisterCreativeTabsEvent;
 import com.sudoplay.mc.kor.spi.event.internal.OnRegisterItemsEvent;
 import com.sudoplay.mc.kor.spi.event.internal.OnRegisterRecipesEvent;
 import com.sudoplay.mc.kormortar.KorMortarCreativeTab;
+import com.sudoplay.mc.kormortar.module.mortar.item.ItemMortarDiamond;
+import com.sudoplay.mc.kormortar.module.mortar.item.ItemMortarIron;
+import com.sudoplay.mc.kormortar.module.mortar.item.ItemMortarStone;
 import com.sudoplay.mc.kormortar.module.mortar.item.ItemMortarWood;
 import com.sudoplay.mc.kormortar.module.mortar.recipe.RecipeRegistrationDelegate;
 
 import java.io.File;
 
 /**
- * Created by sk3lls on 11/22/2016.
+ * Created by codetaylor on 11/22/2016.
  */
 public class ModuleMortar implements
     IKorModule {
@@ -24,6 +27,7 @@ public class ModuleMortar implements
     public static final String FILENAME = MODULE_ID + "/" + MODULE_ID + ".cfg";
 
     public static final String CATEGORY_ITEM_MORTAR = "1 - Mortar";
+    public static final String CATEGORY_ITEM_MORTAR_DURABILITY = "2 - Mortar Durability";
   }
 
   @Override
@@ -53,7 +57,10 @@ public class ModuleMortar implements
   public void onRegisterItemsEvent(OnRegisterItemsEvent event) {
     event.getRegistryService().register(
 
-        ItemMortarWood.class
+        ItemMortarWood.class,
+        ItemMortarStone.class,
+        ItemMortarIron.class,
+        ItemMortarDiamond.class
     );
   }
 

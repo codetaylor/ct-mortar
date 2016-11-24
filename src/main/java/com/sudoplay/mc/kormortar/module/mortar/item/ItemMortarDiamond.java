@@ -19,37 +19,37 @@ import static com.sudoplay.mc.kormortar.module.mortar.ModuleMortar.Config;
  */
 
 @KorRegistrationTextConfigDependency(dependsOn = {
-    @KorTextConfigDependency(filename = Config.FILENAME, category = Config.CATEGORY_ITEM_MORTAR, key = "wood")
+    @KorTextConfigDependency(filename = Config.FILENAME, category = Config.CATEGORY_ITEM_MORTAR, key = "diamond")
 })
 
 @KorGenerateModelItemSingleTexture(
-    name = "mortar_wood",
+    name = "mortar_diamond",
     modId = KorMortar.MOD_ID
 )
 
 @KorGenerateLangEntries(entries = {
-    @KorLangEntry(key = "item.mortar_wood.name", value = "Mortar (Wood)")
+    @KorLangEntry(key = "item.mortar_diamond.name", value = "Mortar (Diamond)")
 })
 
 @KorGenerateImageSlices(slices = {
-    @KorImageSliceEntry(col = 1, row = 1, target = "items/mortar_wood", source = "KorMortar.png")
+    @KorImageSliceEntry(col = 4, row = 1, target = "items/mortar_diamond", source = "KorMortar.png")
 })
 
 @ForgeEventListener
-public class ItemMortarWood extends
+public class ItemMortarDiamond extends
     AbstractItemMortar {
 
   @KorInject
-  public ItemMortarWood(
+  public ItemMortarDiamond(
       Kor kor,
       @KorJsonConfig(path = ModuleMortar.MODULE_ID, file = "mortar_properties.json") ConfigMortar config
   ) {
     super(
         KorMortar.MOD_ID,
-        "mortar_wood"
+        "mortar_diamond"
     );
     setCreativeTab(kor.get(KorMortarCreativeTab.class));
-    setMaxDamage(config.getConfigMortarEntry("wood").getDurability());
+    setMaxDamage(config.getConfigMortarEntry("diamond").getDurability());
     setMaxStackSize(1);
   }
 }

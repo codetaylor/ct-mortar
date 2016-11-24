@@ -1,1 +1,5 @@
+itemGroup.ctkormortar_tab=CTKor Mortar
 item.mortar_wood.name=Mortar (Wood)
+item.mortar_stone.name=Mortar (Stone)
+item.mortar_iron.name=Mortar (Iron)
+item.mortar_diamond.name=Mortar (Diamond)

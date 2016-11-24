@@ -7,18 +7,21 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * Created by sk3lls on 11/23/2016.
+ * Created by codetaylor on 11/23/2016.
  */
-public class ConfigMortarWood extends
+public class ConfigMortar extends
     KorConfigObject {
 
   @SerializedName("mortars")
   private Map<String, ConfigMortarEntry> entryMap;
 
-  public ConfigMortarWood() {
+  public ConfigMortar() {
     this.entryMap = new LinkedHashMap<>();
 
-    this.entryMap.put("wood", new ConfigMortarEntry(20));
+    this.entryMap.put("wood", new ConfigMortarEntry(16));
+    this.entryMap.put("stone", new ConfigMortarEntry(64));
+    this.entryMap.put("iron", new ConfigMortarEntry(256));
+    this.entryMap.put("diamond", new ConfigMortarEntry(1024));
   }
 
   public ConfigMortarEntry getConfigMortarEntry(String name) {

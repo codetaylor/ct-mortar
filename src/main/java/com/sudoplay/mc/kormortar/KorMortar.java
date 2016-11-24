@@ -8,7 +8,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 /**
- * Created by sk3lls on 11/22/2016.
+ * Created by codetaylor on 11/22/2016.
  */
 @net.minecraftforge.fml.common.Mod(
     modid = KorMortar.MOD_ID,

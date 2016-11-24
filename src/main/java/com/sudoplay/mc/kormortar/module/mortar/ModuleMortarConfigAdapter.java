@@ -7,7 +7,7 @@ import com.sudoplay.mc.kormortar.shared.MortarType;
 import net.minecraftforge.common.config.Configuration;
 
 /**
- * Created by sk3lls on 11/22/2016.
+ * Created by codetaylor on 11/22/2016.
  */
 public class ModuleMortarConfigAdapter implements
     KorForgeConfigurationAdapter<TextConfigData> {
@@ -26,5 +26,12 @@ public class ModuleMortarConfigAdapter implements
     for (MortarType mortarType : MortarType.values()) {
       KorConfigUtil.adaptBoolean(category, mortarType.getName(), true, configuration, textConfigData);
     }
+
+    category = ModuleMortar.Config.CATEGORY_ITEM_MORTAR_DURABILITY;
+
+    configuration.addCustomCategoryComment(
+        category,
+        ""
+    );
   }
 }
