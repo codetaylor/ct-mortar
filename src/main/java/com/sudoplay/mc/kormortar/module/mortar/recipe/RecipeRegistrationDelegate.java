@@ -13,7 +13,7 @@ public class RecipeRegistrationDelegate extends
 
   @KorInject
   public RecipeRegistrationDelegate(
-      @KorJsonConfig(path = ModuleMortar.MODULE_ID, file = "recipes.json") Recipes recipeFile
+      @KorJsonConfig(file = "recipes.json") Recipes recipeFile
   ) {
     super(recipeFile);
   }

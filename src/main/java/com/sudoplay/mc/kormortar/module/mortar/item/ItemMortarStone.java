@@ -1,16 +1,15 @@
 package com.sudoplay.mc.kormortar.module.mortar.item;
 
+import com.sudoplay.mc.kor.core.config.text.TextConfigData;
 import com.sudoplay.mc.kor.core.generation.annotation.*;
 import com.sudoplay.mc.kor.spi.Kor;
 import com.sudoplay.mc.kor.spi.registry.ForgeEventListener;
 import com.sudoplay.mc.kor.spi.registry.dependency.KorRegistrationTextConfigDependency;
 import com.sudoplay.mc.kor.spi.registry.dependency.KorTextConfigDependency;
 import com.sudoplay.mc.kor.spi.registry.injection.KorInject;
-import com.sudoplay.mc.kor.spi.registry.injection.KorJsonConfig;
+import com.sudoplay.mc.kor.spi.registry.injection.KorTextConfig;
 import com.sudoplay.mc.kormortar.KorMortar;
 import com.sudoplay.mc.kormortar.KorMortarCreativeTab;
-import com.sudoplay.mc.kormortar.module.mortar.ModuleMortar;
-import com.sudoplay.mc.kormortar.module.mortar.config.ConfigMortar;
 
 import static com.sudoplay.mc.kormortar.module.mortar.ModuleMortar.Config;
 
@@ -42,14 +41,14 @@ public class ItemMortarStone extends
   @KorInject
   public ItemMortarStone(
       Kor kor,
-      @KorJsonConfig(path = ModuleMortar.MODULE_ID, file = "mortar_properties.json") ConfigMortar config
+      @KorTextConfig(file = Config.FILENAME) TextConfigData textConfigData
   ) {
     super(
         KorMortar.MOD_ID,
         "mortar_stone"
     );
     setCreativeTab(kor.get(KorMortarCreativeTab.class));
-    setMaxDamage(config.getConfigMortarEntry("stone").getDurability());
+    setMaxDamage(textConfigData.getCategory(Config.CATEGORY_ITEM_MORTAR_DURABILITY).getInteger("stone"));
     setMaxStackSize(1);
   }
 }

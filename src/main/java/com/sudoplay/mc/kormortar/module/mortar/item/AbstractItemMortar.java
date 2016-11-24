@@ -38,18 +38,19 @@ import javax.annotation.Nonnull;
           && itemStack.getItem() == this
           && itemStack.getItemDamage() <= getMaxDamage()) {
 
-        if (getMaxDamage() == 0) {
+        if (getMaxDamage() == 0) { // the item is indestructible
           itemStack.stackSize += 1;
           continue;
         }
 
         int itemDamage = itemStack.getItemDamage() + 1;
 
-        if (itemDamage == getMaxDamage()) {
+        if (itemDamage == getMaxDamage()) { // the item's durability has expired
           // item, get rekt
           event.player.worldObj.playSound(event.player, event.player.posX, event.player.posY, event.player.posZ, SoundEvents.ENTITY_ITEM_BREAK, SoundCategory.PLAYERS, 1.0f, 1.0f);
 
         } else {
+          // ensure the item stays in the crafting table (and utterly ruin it a little bit)
           itemStack.stackSize += 1;
           itemStack.setItemDamage(itemDamage);
         }
