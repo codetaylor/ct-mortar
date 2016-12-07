@@ -49,10 +49,7 @@ public class Recipes extends
         }
     ));
 
-    this.recipeShapelessMap.put("sand from gravel in mortar_wood", new RecipeShapeless(
-        "minecraft:sand",
-        KorMortar.MOD_ID + ":mortar_wood:*, ore:gravel"
-    ));
+    // -[ Sand ]-------------------------------------------
 
     this.recipeShapelessMap.put("sand from gravel in mortar_stone", new RecipeShapeless(
         "minecraft:sand",
@@ -67,6 +64,18 @@ public class Recipes extends
     this.recipeShapelessMap.put("sand from gravel in mortar_diamond", new RecipeShapeless(
         "minecraft:sand",
         KorMortar.MOD_ID + ":mortar_diamond:*, ore:gravel"
+    ));
+
+    // -[ Gravel ]-----------------------------------------
+
+    this.recipeShapelessMap.put("gravel from cobblestone in mortar_iron", new RecipeShapeless(
+        "minecraft:gravel",
+        KorMortar.MOD_ID + ":mortar_iron:*, ore:cobblestone"
+    ));
+
+    this.recipeShapelessMap.put("gravel from cobblestone in mortar_diamond", new RecipeShapeless(
+        "minecraft:gravel",
+        KorMortar.MOD_ID + ":mortar_diamond:*, ore:cobblestone"
     ));
   }
 }

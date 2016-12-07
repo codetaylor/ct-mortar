@@ -10,7 +10,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 /**
  * Created by codetaylor on 11/22/2016.
  */
-@net.minecraftforge.fml.common.Mod(
+@Mod(
     modid = KorMortar.MOD_ID,
     version = KorMortar.VERSION,
     name = KorMortar.NAME
@@ -19,7 +19,7 @@ public class KorMortar extends
     Kor {
 
   public static final String MOD_ID = "ctkormortar";
-  public static final String VERSION = "snapshot";
+  public static final String VERSION = "@@VERSION@@";
   public static final String NAME = "CTKor Mortar";
   public static final double JSON_CONFIGS_VERSION = 1.0;
 
