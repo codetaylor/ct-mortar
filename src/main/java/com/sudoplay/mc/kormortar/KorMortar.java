@@ -14,6 +14,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
     modid = KorMortar.MOD_ID,
     version = KorMortar.VERSION,
     name = KorMortar.NAME
+    //@@DEPENDENCIES@@
 )
 public class KorMortar extends
     Kor {
