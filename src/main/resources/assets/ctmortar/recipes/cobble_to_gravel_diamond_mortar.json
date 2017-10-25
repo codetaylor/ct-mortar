@@ -1,0 +1,15 @@
+{
+  "result": {
+    "item": "minecraft:gravel"
+  },
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:cobblestone"
+    },
+    {
+      "item": "ctmortar:mortar_diamond",
+      "data": 32767
+    }
+  ]
+}

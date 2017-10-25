@@ -1,0 +1,16 @@
+{
+  "result": {
+    "item": "minecraft:sand",
+    "data": 0
+  },
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:gravel"
+    },
+    {
+      "item": "ctmortar:mortar_iron",
+      "data": 32767
+    }
+  ]
+}

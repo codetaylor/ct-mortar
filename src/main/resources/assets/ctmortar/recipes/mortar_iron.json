@@ -1,0 +1,24 @@
+{
+  "result": {
+    "item": "ctmortar:mortar_iron"
+  },
+  "pattern": [
+    "  s",
+    "wfw",
+    " w "
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "s": {
+      "type": "forge:ore_dict",
+      "ore": "stickWood"
+    },
+    "w": {
+      "type": "forge:ore_dict",
+      "ore": "ingotIron"
+    },
+    "f": {
+      "item": "minecraft:flint"
+    }
+  }
+}

@@ -1,16 +1,16 @@
 [
 {
-  "modid": "ctkormortar",
-  "name": "CTKor Mortar",
+  "modid": "ctmortar",
+  "name": "CT Mortar",
   "description": "A simple mortar and pestle mod that adds four tiers of mortars with configurable durability.",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "https://github.com/codetaylor/kor-mortar",
+  "url": "https://github.com/codetaylor/ct-mortar",
   "updateUrl": "",
   "authorList": ["codetaylor"],
   "credits": "",
   "logoFile": "",
   "screenshots": [],
-  "dependencies": ["ctkorlib"]
+  "dependencies": []
 }
 ]
